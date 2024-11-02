@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   return (
@@ -21,6 +22,7 @@ export default function Header() {
             <SocialLink href="https://linkedin.com" icon={<Linkedin className="w-5 h-5" />} />
             <SocialLink href="https://twitter.com" icon={<Twitter className="w-5 h-5" />} />
             <SocialLink href="mailto:contact@example.com" icon={<Mail className="w-5 h-5" />} />
+            <ThemeToggle/>
           </div>
         </div>
       </nav>
