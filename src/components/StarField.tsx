@@ -38,8 +38,9 @@ export default function StarField() {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#ffffff';
-
+      // Set star color based on the root class
+      const isDarkTheme = document.documentElement.classList.contains('dark');
+      ctx.fillStyle = isDarkTheme ? '#ffffff' : '#000000';
       stars.forEach((star) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);

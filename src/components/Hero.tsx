@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import profileImage from '../assets/profile.jpg'; // Import the image
+import { DATA } from '../data/resume';
 
 export default function Hero() {
   return (
@@ -18,7 +20,7 @@ export default function Hero() {
           className="w-32 h-32 rounded-full mx-auto mb-8 overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop"
+            src={profileImage}
             alt="Profile"
             className="w-full h-full object-cover"
           />
@@ -30,7 +32,7 @@ export default function Hero() {
           transition={{ delay: 0.4 }}
           className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
         >
-          John Doe
+          {DATA.basics.name}
         </motion.h1>
         
         <motion.h2
@@ -39,7 +41,7 @@ export default function Hero() {
           transition={{ delay: 0.6 }}
           className="text-2xl md:text-3xl text-gray-700 mb-8"
         >
-          Full Stack Developer
+          {DATA.basics.title}
         </motion.h2>
         
         <motion.p
@@ -48,8 +50,7 @@ export default function Hero() {
           transition={{ delay: 0.8 }}
           className="text-lg text-gray-600 max-w-2xl mx-auto mb-12"
         >
-          Crafting beautiful and functional web experiences with modern technologies.
-          Specialized in React, Node.js, and cloud architecture.
+          {DATA.basics.description}
         </motion.p>
         
         <motion.div
