@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
-import profileImage from '../assets/profile.jpg'; // Import the image
+import profileImage from '../assets/Profile_Pic.jpg'; // Import the image
 import { DATA } from '../data/resume';
 
 export default function Hero() {
@@ -17,7 +17,7 @@ export default function Hero() {
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="w-32 h-32 rounded-full mx-auto mb-8 overflow-hidden"
+          className="w-48 h-48 rounded-full mx-auto mb-8 overflow-hidden"
         >
           <img
             src={profileImage}
